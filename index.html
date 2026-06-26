@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fase Final - Copa del Mundo de la FIFA 2026™</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="titulo-web">FIFA WORLD CUP 2026</h1>
+
+    <div class="super-contenedor-mundial">
+        
+        <div id="columna-grupos-izq" class="columna-grupos-lateral"></div>
+
+        <div class="contenedor-cuadro">
+            
+            <div id="ronda-16-izq" class="columna ronda-16"></div>
+            
+            <div id="ronda-8-izq" class="columna ronda-8"></div>
+            
+            <div id="ronda-4-izq" class="columna ronda-4"></div>
+            
+            <div id="ronda-2-izq" class="columna ronda-2"></div>
+
+            <div id="columna-final" class="columna columna-final"></div>
+
+            <div id="ronda-2-der" class="columna ronda-2"></div>
+            
+            <div id="ronda-4-der" class="columna ronda-4"></div>
+            
+            <div id="ronda-8-der" class="columna ronda-8"></div>
+            
+            <div id="ronda-16-der" class="columna ronda-16"></div>
+
+        </div>
+
+        <div id="columna-grupos-der" class="columna-grupos-lateral"></div>
+
+    </div>
+    
+    <template id="plantilla-grupo">
+        <div class="tabla-grupo-contenedor">
+            <h4 class="titulo-grupo"></h4>
+            <table class="tabla-grupo-tabla">
+                <thead>
+                    <tr>
+                        <th class="col-pos">#</th>
+                        <th class="col-equipo">Equipo</th>
+                        <th class="col-dato">Pts</th>
+                        <th class="col-dato">PJ</th>
+                        <th class="col-dato">GF</th>
+                        <th class="col-dato">GC</th>
+                    </tr>
+                </thead>
+                <tbody class="cuerpo-tabla-equipos">
+                    </tbody>
+            </table>
+        </div>
+    </template>
+
+    <template id="plantilla-fila-equipo">
+        <tr>
+            <td class="col-pos"></td>
+            <td class="col-equipo">
+                <img class="flag-mini" src="" alt="" style="display: none;">
+                <span class="icono-reemplazo" style="display: none;">📋</span>
+                <span class="nombre-completo-txt"></span>
+            </td>
+            <td class="col-dato col-destacado col-pts"></td>
+            <td class="col-dato col-pj"></td>
+            <td class="col-dato col-gf"></td>
+            <td class="col-dato col-gc"></td>
+        </tr>
+    </template>
+
+    <script src="paises.js"></script>
+    <script src="datos.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
