@@ -2,11 +2,11 @@
 const mundialData = {
   "ronda-16-izq": [
     {"id": "P74", "equipoA": "GER", "equipoB": "3ABCDF"},
-    {"id": "P77", "equipoA": "1I", "equipoB": "3CDFGH"},
+    {"id": "P77", "equipoA": "FRA", "equipoB": "3CDFGH"},
     {"id": "P73", "equipoA": "RSA", "equipoB": "CAN"},
     {"id": "P75", "equipoA": "NED", "equipoB": "MAR"},
     {"id": "P83", "equipoA": "2K", "equipoB": "2L"},
-    {"id": "P84", "equipoA": "1H", "equipoB": "2J"},
+    {"id": "P84", "equipoA": "ESP", "equipoB": "2J"},
     {"id": "P81", "equipoA": "USA", "equipoB": "BIH"},
     {"id": "P82", "equipoA": "1G", "equipoB": "3AEHIJ"}
   ],
@@ -49,10 +49,10 @@ const mundialData = {
   ],
   "ronda-16-der": [
     {"id": "P76", "equipoA": "BRA", "equipoB": "JPN"},
-    {"id": "P78", "equipoA": "CIV", "equipoB": "2I"},
+    {"id": "P78", "equipoA": "CIV", "equipoB": "NOR"},
     {"id": "P79", "equipoA": "MEX", "equipoB": "3CEFHI"},
     {"id": "P80", "equipoA": "1L", "equipoB": "3EHIJK"},
-    {"id": "P86", "equipoA": "ARG", "equipoB": "2H"},
+    {"id": "P86", "equipoA": "ARG", "equipoB": "CPV"},
     {"id": "P88", "equipoA": "AUS", "equipoB": "2G"},
     {"id": "P85", "equipoA": "SUI", "equipoB": "3EFGIJ"},
     {"id": "P87", "equipoA": "1K", "equipoB": "3DEIJL"}
@@ -130,19 +130,19 @@ const datosGruposMundial = {
         {
             nombre: "GRUPO H",
             equipos: [
-                { codigo: "ESP", pts: 4, pj: 2, gf: 4, gc: 0 },
-                { codigo: "URU", pts: 2, pj: 2, gf: 3, gc: 3 },
-                { codigo: "CPV", pts: 2, pj: 2, gf: 2, gc: 2 },
-                { codigo: "KSA", pts: 1, pj: 2, gf: 1, gc: 5 }
+                { codigo: "ESP", pts: 7, pj: 3, gf: 5, gc: 0 },
+                { codigo: "CPV", pts: 3, pj: 3, gf: 2, gc: 2 },
+                { codigo: "URU", pts: 2, pj: 3, gf: 3, gc: 4 },
+                { codigo: "KSA", pts: 2, pj: 3, gf: 1, gc: 5 }
             ]
         },
         {
             nombre: "GRUPO I",
             equipos: [
-                { codigo: "FRA", pts: 6, pj: 2, gf: 6, gc: 1 },
-                { codigo: "NOR", pts: 6, pj: 2, gf: 7, gc: 3 },
-                { codigo: "SEN", pts: 0, pj: 2, gf: 3, gc: 6 },
-                { codigo: "IRQ", pts: 0, pj: 2, gf: 1, gc: 7 }
+                { codigo: "FRA", pts: 9, pj: 3, gf: 10, gc: 2 },
+                { codigo: "NOR", pts: 6, pj: 3, gf: 8, gc: 7 },
+                { codigo: "SEN", pts: 3, pj: 3, gf: 8, gc: 6 },
+                { codigo: "IRQ", pts: 0, pj: 3, gf: 1, gc: 12 }
             ]
         },
         {
