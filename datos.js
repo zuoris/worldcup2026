@@ -1,11 +1,11 @@
 // BASE DE DATOS FIEL A LA IMAGEN OFICIAL DE LA FIFA
 const mundialData = {
   "ronda-16-izq": [
-    {"id": "P74", "equipoA": "GER", "equipoB": "3ABCDF"},
-    {"id": "P77", "equipoA": "FRA", "equipoB": "3CDFGH"},
+    {"id": "P74", "equipoA": "GER", "equipoB": "PAR"},
+    {"id": "P77", "equipoA": "FRA", "equipoB": "SWE"},
     {"id": "P73", "equipoA": "RSA", "equipoB": "CAN"},
     {"id": "P75", "equipoA": "NED", "equipoB": "MAR"},
-    {"id": "P83", "equipoA": "2K", "equipoB": "2L"},
+    {"id": "P83", "equipoA": "2K", "equipoB": "CRO"},
     {"id": "P84", "equipoA": "ESP", "equipoB": "2J"},
     {"id": "P81", "equipoA": "USA", "equipoB": "BIH"},
     {"id": "P82", "equipoA": "BEL", "equipoB": "3AEHIJ"}
@@ -50,12 +50,12 @@ const mundialData = {
   "ronda-16-der": [
     {"id": "P76", "equipoA": "BRA", "equipoB": "JPN"},
     {"id": "P78", "equipoA": "CIV", "equipoB": "NOR"},
-    {"id": "P79", "equipoA": "MEX", "equipoB": "3CEFHI"},
-    {"id": "P80", "equipoA": "1L", "equipoB": "3EHIJK"},
+    {"id": "P79", "equipoA": "MEX", "equipoB": "ECU"},
+    {"id": "P80", "equipoA": "ENG", "equipoB": "3EHIJK"},
     {"id": "P86", "equipoA": "ARG", "equipoB": "CPV"},
     {"id": "P88", "equipoA": "AUS", "equipoB": "EGY"},
     {"id": "P85", "equipoA": "SUI", "equipoB": "3EFGIJ"},
-    {"id": "P87", "equipoA": "1K", "equipoB": "3DEIJL"}
+    {"id": "P87", "equipoA": "1K", "equipoB": "GHA"}
   ]
 };
 
@@ -166,10 +166,10 @@ const datosGruposMundial = {
         {
             nombre: "GRUPO L",
             equipos: [
-                { codigo: "ENG", pts: 4, pj: 2, gf: 4, gc: 2 },
-                { codigo: "GHA", pts: 4, pj: 2, gf: 1, gc: 0 },
-                { codigo: "CRO", pts: 3, pj: 2, gf: 3, gc: 4 },
-                { codigo: "PAN", pts: 0, pj: 2, gf: 0, gc: 2 }
+                { codigo: "ENG", pts: 7, pj: 3, gf: 6, gc: 2 },
+                { codigo: "CRO", pts: 6, pj: 3, gf: 5, gc: 5 },
+                { codigo: "GHA", pts: 4, pj: 3, gf: 2, gc: 2 },
+                { codigo: "PAN", pts: 0, pj: 3, gf: 0, gc: 4 }
             ]
         }
     ]
