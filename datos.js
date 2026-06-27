@@ -8,7 +8,7 @@ const mundialData = {
     {"id": "P83", "equipoA": "2K", "equipoB": "2L"},
     {"id": "P84", "equipoA": "ESP", "equipoB": "2J"},
     {"id": "P81", "equipoA": "USA", "equipoB": "BIH"},
-    {"id": "P82", "equipoA": "1G", "equipoB": "3AEHIJ"}
+    {"id": "P82", "equipoA": "BEL", "equipoB": "3AEHIJ"}
   ],
   "ronda-8-izq": [
     {"id": "P89", "equipoA": "W74", "equipoB": "W77"},
@@ -53,7 +53,7 @@ const mundialData = {
     {"id": "P79", "equipoA": "MEX", "equipoB": "3CEFHI"},
     {"id": "P80", "equipoA": "1L", "equipoB": "3EHIJK"},
     {"id": "P86", "equipoA": "ARG", "equipoB": "CPV"},
-    {"id": "P88", "equipoA": "AUS", "equipoB": "2G"},
+    {"id": "P88", "equipoA": "AUS", "equipoB": "EGY"},
     {"id": "P85", "equipoA": "SUI", "equipoB": "3EFGIJ"},
     {"id": "P87", "equipoA": "1K", "equipoB": "3DEIJL"}
   ]
@@ -121,10 +121,10 @@ const datosGruposMundial = {
         {
             nombre: "GRUPO G",
             equipos: [
-                { codigo: "EGY", pts: 4, pj: 2, gf: 4, gc: 2 },
-                { codigo: "IRN", pts: 2, pj: 2, gf: 2, gc: 2 },
-                { codigo: "BEL", pts: 2, pj: 2, gf: 1, gc: 1 },
-                { codigo: "NZL", pts: 1, pj: 2, gf: 3, gc: 5 }
+                { codigo: "EGY", pts: 5, pj: 3, gf: 5, gc: 3 },
+                { codigo: "BEL", pts: 5, pj: 3, gf: 6, gc: 2 },
+                { codigo: "IRN", pts: 3, pj: 3, gf: 3, gc: 3 },
+                { codigo: "NZL", pts: 1, pj: 3, gf: 4, gc: 10 }
             ]
         },
         {
