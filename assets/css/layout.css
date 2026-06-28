@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-dark);
+    background-image: radial-gradient(circle at center, #0a0a1a 0%, var(--bg-dark) 100%);
+    color: var(--text-pure);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow: hidden;
+    font-family: var(--font-main);
+}
+
+.contenedor-cuadro {
+    display: grid;
+    grid-template-columns: repeat(4, 150px) 260px repeat(4, 150px);
+    gap: 14px;
+    width: 100%;
+    max-width: 1600px;
+    height: 80vh; 
+    align-items: center;
+}
+
+.columna {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Distribución de las columnas */
+.ronda-16 { justify-content: space-around; }
+.ronda-8  { justify-content: center; }
+.ronda-8 .partido  { margin: auto 0; }
+.ronda-4  { justify-content: center; }
+.ronda-4 .partido  { margin: auto 0; }
+.ronda-2  { justify-content: center; }
+.ronda-2 .partido  { margin: auto 0; }
+
+
+/* Ajustamos el contenedor macro para dar más porcentaje a los extremos */
+.super-contenedor-mundial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1850px;
+    gap: 24px;
+    padding: 0 15px;
+}
+
+/* Hacemos las columnas de los grupos notablemente más anchas (de 160px a 220px) */
+.columna-grupos-lateral {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 82vh; 
+    width: 260px;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.columna-final {
+    justify-content: center;
+    position: relative;
+    padding-top: 140px !important; 
+}

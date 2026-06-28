@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fase Final - Copa del Mundo de la FIFA 2026™</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
@@ -40,6 +40,11 @@
 
     </div>
     
+    <!-- ==========================================
+         PLANTILLAS NATIVAS (MOLDES DE MAQUETACIÓN)
+         ========================================== -->
+
+    <!-- 1. Molde para la Tarjeta de cada Grupo -->
     <template id="plantilla-grupo">
         <div class="tabla-grupo-contenedor">
             <h4 class="titulo-grupo"></h4>
@@ -54,12 +59,12 @@
                         <th class="col-dato">GC</th>
                     </tr>
                 </thead>
-                <tbody class="cuerpo-tabla-equipos">
-                    </tbody>
+                <tbody class="cuerpo-tabla-equipos"></tbody>
             </table>
         </div>
     </template>
 
+    <!-- 2. Molde para la Fila de cada Equipo en los Grupos -->
     <template id="plantilla-fila-equipo">
         <tr>
             <td class="col-pos"></td>
@@ -75,8 +80,22 @@
         </tr>
     </template>
 
-    <script src="paises.js"></script>
-    <script src="datos.js"></script>
-    <script src="app.js"></script>
+    <!-- 3. NUEVO: Molde para las Tarjetas de los Partidos (Fase Final) -->
+    <template id="plantilla-partido-eliminatoria">
+        <div class="tarjeta-partido-neon">
+            
+            <!-- Etiqueta horaria adaptativa gestionada por JS -->
+            <div class="info-fecha-hora"></div>
+            
+            <div class="bloque-equipos-partido">
+                <!-- Tu estructura interna actual de partido (nombres, banderas, goles) se inyectará aquí de forma limpia -->
+            </div>
+        </div>
+    </template>
+
+    <!-- Arquitectura de scripts en la raíz -->
+    <script src="assets/js/paises.js"></script>
+    <script src="assets/js/datos.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>

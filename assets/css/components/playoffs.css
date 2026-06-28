@@ -1,0 +1,179 @@
+.partido {
+    position: relative; 
+    background: var(--card-bg);
+    border: 1px solid rgba(0, 102, 255, 0.3);
+    border-radius: 4px;
+    padding: 8px 12px;
+    padding-top: 22px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.partido hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin: 6px 0;
+}
+
+.partido-id {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 102, 255, 0.15);
+    color: #00cbff;
+    border-right: 1px solid rgba(0, 102, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 102, 255, 0.3);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    letter-spacing: 0.05em;
+}
+
+.columna:nth-child(-n+4) .partido:hover {
+    border-color: var(--neon-red);
+    box-shadow: 0 0 15px rgba(255, 0, 68, 0.4), inset 0 0 8px rgba(255, 0, 68, 0.2);
+    transform: scale(1.02);
+}
+.columna:nth-child(-n+4) .partido:hover .partido-id {
+    background: var(--neon-red);
+    color: var(--text-pure);
+    border-color: var(--neon-red);
+}
+
+.columna:nth-child(n+6) .partido:hover {
+    border-color: var(--neon-green);
+    box-shadow: 0 0 15px rgba(0, 255, 102, 0.4), inset 0 0 8px rgba(0, 255, 102, 0.2);
+    transform: scale(1.02);
+}
+.columna:nth-child(n+6) .partido:hover .partido-id {
+    background: var(--neon-green);
+    color: var(--bg-dark);
+    border-color: var(--neon-green);
+}
+
+.gran-final {
+    background: #04040a;
+    /* Enmarcado dorado con el resplandor vivo que abraza al trofeo en tu imagen */
+    border: 2px solid var(--neon-yellow);
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 
+        0 0 30px rgba(212, 175, 55, 0.2),
+        inset 0 0 15px rgba(0, 255, 102, 0.1); /* Destello verde sutil en la base */
+}
+
+.gran-final h2 {
+    font-family: 'Syne', sans-serif;
+    color: var(--neon-yellow);
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    /* Brillo de oro puro */
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.final-match {
+    background: var(--bg-dark);
+    border: 1px solid var(--neon-yellow);
+}
+
+.final-match:hover {
+    border-color: var(--neon-green) !important;
+    box-shadow: 0 0 25px rgba(0, 255, 102, 0.5) !important;
+    transform: scale(1.04) !important;
+}
+
+.campeon {
+    margin-top: 18px;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    color: var(--neon-yellow);
+    font-size: 0.95rem;
+    animation: neonPulse 2s infinite ease-in-out;
+}
+
+@keyframes neonPulse {
+    0% { transform: scale(1); text-shadow: 0 0 8px rgba(212, 175, 55, 0.6); }
+    50% { transform: scale(1.02); text-shadow: 0 0 18px rgba(0, 255, 102, 0.8), 0 0 8px rgba(212, 175, 55, 1); }
+    100% { transform: scale(1); text-shadow: 0 0 8px rgba(212, 175, 55, 0.6); }
+}
+
+.tercer-puesto-bloque {
+    margin-top: 30px; 
+    text-align: center;
+    width: 100%;
+}
+
+.tercer-puesto-bloque {
+    margin-top: 30px; 
+    text-align: center;
+    width: 100%;
+}
+
+.tercer-puesto-bloque h3 {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+}
+
+.tercer-match {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px dashed var(--text-muted);
+    max-width: 220px;
+    margin: 0 auto !important;
+}
+
+.tercer-match:hover {
+    border-color: var(--text-pure);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.columna-final::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65px;   /* Ancho en pantalla */
+    height: 120px; /* Alto en pantalla */
+    
+    /* Tu nueva imagen sin fondo */
+    background-image: url("../../img/cup.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    /* El aura de neón ahora sí envolverá perfectamente la silueta del trofeo */
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.65)) 
+            drop-shadow(0 0 25px rgba(255, 145, 0, 0.35));
+            
+    animation: levitarCopaFinal 4.5s ease-in-out infinite;
+    z-index: 10;
+}
+
+/* Animación de levitación fluida de estilo arcade/deportivo */
+@keyframes levitarCopaFinal {
+    0% {
+        top: 15px;
+        filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.65)) 
+                drop-shadow(0 0 25px rgba(255, 145, 0, 0.35));
+    }
+    50% {
+        top: 5px; /* Sube elegantemente */
+        filter: drop-shadow(0 0 18px rgba(255, 225, 0, 0.85)) 
+                drop-shadow(0 0 35px rgba(255, 165, 0, 0.45));
+    }
+    100% {
+        top: 15px;
+        filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.65)) 
+                drop-shadow(0 0 25px rgba(255, 145, 0, 0.35));
+    }
+}

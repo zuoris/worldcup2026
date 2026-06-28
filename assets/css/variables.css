@@ -1,0 +1,13 @@
+
+:root {
+    --bg-dark: #000000;
+    --neon-red: #ff0044;
+    --neon-blue: #0066ff;
+    --neon-green: #00ff66;
+    --neon-yellow: #d4af37;
+    --text-pure: #ffffff;
+    --text-muted: #4b5563;
+    --card-bg: rgba(5, 5, 12, 0.9);
+    
+    --font-main: 'Space Grotesk', sans-serif;
+}

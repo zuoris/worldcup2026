@@ -1,0 +1,47 @@
+.titulo-web {
+    font-family: 'Syne', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin-bottom: 25px;
+    text-align: center;
+    
+    color: var(--text-pure);
+    /* Imitación del resplandor tricolor que envuelve el título */
+    text-shadow: 
+        -4px -4px 10px rgba(255, 0, 68, 0.6),
+        0px 0px 15px rgba(0, 102, 255, 0.6),
+        4px 4px 10px rgba(0, 255, 102, 0.6);
+}
+
+.fila-equipo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 30px; 
+}
+
+.equipo-nombre {
+    font-size: 0.75rem; 
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 0.01em;
+}
+
+.flag-img {
+    width: 22px;
+    height: 15px;
+    object-fit: cover;
+    margin-right: 12px;
+    flex-shrink: 0;
+    border-radius: 1px;
+}
+
+.flag-placeholder {
+    font-size: 0.9rem;
+    margin-right: 12px;
+    flex-shrink: 0;
+    opacity: 0.4;
+}
