@@ -148,19 +148,19 @@ const datosGruposMundial = {
         {
             nombre: "GRUPO J",
             equipos: [
-                { codigo: "ARG", pts: 6, pj: 2, gf: 5, gc: 0 },
-                { codigo: "AUT", pts: 3, pj: 2, gf: 3, gc: 3 },
-                { codigo: "ALG", pts: 3, pj: 2, gf: 2, gc: 4 },
-                { codigo: "JOR", pts: 0, pj: 2, gf: 2, gc: 5 }
+                { codigo: "ARG", pts: 9, pj: 3, gf: 8, gc: 1 },
+                { codigo: "AUT", pts: 4, pj: 3, gf: 6, gc: 6 },
+                { codigo: "ALG", pts: 4, pj: 3, gf: 5, gc: 7 },
+                { codigo: "JOR", pts: 0, pj: 3, gf: 3, gc: 8 }
             ]
         },
         {
             nombre: "GRUPO K",
             equipos: [
-                { codigo: "COL", pts: 6, pj: 2, gf: 4, gc: 1 },
-                { codigo: "POR", pts: 4, pj: 2, gf: 6, gc: 1 },
-                { codigo: "COD", pts: 1, pj: 2, gf: 1, gc: 2 },
-                { codigo: "UZB", pts: 0, pj: 2, gf: 1, gc: 8 }
+                { codigo: "COL", pts: 7, pj: 3, gf: 4, gc: 1 },
+                { codigo: "POR", pts: 5, pj: 3, gf: 6, gc: 1 },
+                { codigo: "COD", pts: 4, pj: 3, gf: 4, gc: 3 },
+                { codigo: "UZB", pts: 0, pj: 3, gf: 2, gc: 11 }
             ]
         },
         {
