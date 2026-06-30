@@ -54,24 +54,52 @@ function renderizarRonda(idContenedor, partidos) {
     const contenedor = document.getElementById(idContenedor);
     if (!contenedor) return;
     
+    // Capturamos el template de HTML
+    const template = document.getElementById('template-partido');
+    if (!template) return;
+
     partidos.forEach(partido => {
         const datosA = obtenerDatosEquipo(partido.equipoA);
         const datosB = obtenerDatosEquipo(partido.equipoB);
         
-        const tarjeta = document.createElement('div');
-        tarjeta.className = 'partido';
+        // Clonamos el contenido del template (true significa clonar en profundidad)
+        const clon = document.importNode(template.content, true);
         
-        tarjeta.innerHTML = `
-            <div class="partido-id">${partido.id}</div>
-            <div class="fila-equipo">
-                ${generarHtmlEquipo(datosA)}
-            </div>
-            <hr>
-            <div class="fila-equipo">
-                ${generarHtmlEquipo(datosB)}
-            </div>
-        `;
-        contenedor.appendChild(tarjeta);
+        // 1. Rellenamos el ID del partido
+        clon.querySelector('.partido-id').textContent = partido.id;
+        
+        // 2. Rellenamos los datos base del Equipo A
+        const filaA = clon.querySelector('.equipo-a');
+        filaA.querySelector('.equipo-info-box').innerHTML = generarHtmlEquipo(datosA);
+        
+        // 3. Rellenamos los datos base del Equipo B
+        const filaB = clon.querySelector('.equipo-b');
+        filaB.querySelector('.equipo-info-box').innerHTML = generarHtmlEquipo(datosB);
+        
+        // 4. LÓGICA DE MARCADORES (Si el partido ya tiene resultado)
+        if (partido.golesA !== undefined && partido.golesB !== undefined) {
+            // Inyectamos los goles normales
+            filaA.querySelector('.marcador-goles').textContent = partido.golesA;
+            filaB.querySelector('.marcador-goles').textContent = partido.golesB;
+            
+            // ¿Hubo penaltis? (Suponiendo que guardas en tu objeto: penaltisA y penaltisB)
+            if (partido.penaltisA !== undefined && partido.penaltisB !== undefined) {
+                filaA.querySelector('.penaltis-goles').textContent = `(${partido.penaltisA})`;
+                filaB.querySelector('.penaltis-goles').textContent = `(${partido.penaltisB})`;
+            }
+            
+            // Aplicamos clases cosméticas de ganador/perdedor para activar el CSS neón
+            if (partido.ganador === partido.equipoA) {
+                filaA.classList.add('pos-ganador');
+                filaB.classList.add('pos-perdedor');
+            } else if (partido.ganador === partido.equipoB) {
+                filaB.classList.add('pos-ganador');
+                filaA.classList.add('pos-perdedor');
+            }
+        }
+        
+        // Inyectamos el clon completamente preparado en el DOM
+        contenedor.appendChild(clon);
     });
 }
 

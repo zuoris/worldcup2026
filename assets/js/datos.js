@@ -1,10 +1,35 @@
 // BASE DE DATOS FIEL A LA IMAGEN OFICIAL DE LA FIFA
 const mundialData = {
   "ronda-16-izq": [
-    {"id": "P74", "equipoA": "GER", "equipoB": "PAR"},
+    {
+      "id": "P74",
+      "equipoA": "GER",
+      "equipoB": "PAR",
+      "golesA": 1,
+      "golesB": 1,
+      "penaltisA": 3,
+      "penaltisB": 4,
+      "ganador": "PAR"
+    },
     {"id": "P77", "equipoA": "FRA", "equipoB": "SWE"},
-    {"id": "P73", "equipoA": "RSA", "equipoB": "CAN"},
-    {"id": "P75", "equipoA": "NED", "equipoB": "MAR"},
+    {
+      "id": "P73",
+      "equipoA": "RSA",
+      "equipoB": "CAN",
+      "golesA": 0,
+      "golesB": 1,
+      "ganador": "CAN"
+    },
+    {
+      "id": "P75",
+      "equipoA": "NED",
+      "equipoB": "MAR",
+      "golesA": 1,
+      "golesB": 1,
+      "penaltisA": 2,
+      "penaltisB": 3,
+      "ganador": "MAR"
+    },
     {"id": "P83", "equipoA": "POR", "equipoB": "CRO"},
     {"id": "P84", "equipoA": "ESP", "equipoB": "AUT"},
     {"id": "P81", "equipoA": "USA", "equipoB": "BIH"},
@@ -48,7 +73,14 @@ const mundialData = {
     {"id": "P96", "equipoA": "W85", "equipoB": "W87"}
   ],
   "ronda-16-der": [
-    {"id": "P76", "equipoA": "BRA", "equipoB": "JPN"},
+    {
+      "id": "P76",
+      "equipoA": "BRA",
+      "equipoB": "JPN",
+      "golesA": 2,
+      "golesB": 1,
+      "ganador": "BRA"
+    },
     {"id": "P78", "equipoA": "CIV", "equipoB": "NOR"},
     {"id": "P79", "equipoA": "MEX", "equipoB": "ECU"},
     {"id": "P80", "equipoA": "ENG", "equipoB": "COD"},

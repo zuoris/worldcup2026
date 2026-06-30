@@ -80,20 +80,34 @@
         </tr>
     </template>
 
-    <!-- 3. NUEVO: Molde para las Tarjetas de los Partidos (Fase Final) -->
-    <template id="plantilla-partido-eliminatoria">
-        <div class="tarjeta-partido-neon">
+    <template id="template-partido">
+        <div class="partido">
+            <div class="partido-id"></div>
             
-            <!-- Etiqueta horaria adaptativa gestionada por JS -->
-            <div class="info-fecha-hora"></div>
+            <!-- Fila Equipo A -->
+            <div class="fila-equipo equipo-a">
+                <!-- Aquí JavaScript inyectará la bandera y el nombre -->
+                <div class="equipo-info-box"></div> 
+                <div class="resultado-box">
+                    <span class="penaltis-goles"></span>
+                    <span class="marcador-goles"></span>
+                </div>
+            </div>
             
-            <div class="bloque-equipos-partido">
-                <!-- Tu estructura interna actual de partido (nombres, banderas, goles) se inyectará aquí de forma limpia -->
+            <hr>
+            
+            <!-- Fila Equipo B -->
+            <div class="fila-equipo equipo-b">
+                <!-- Aquí JavaScript inyectará la bandera y el nombre -->
+                <div class="equipo-info-box"></div>
+                <div class="resultado-box">
+                    <span class="penaltis-goles"></span>
+                    <span class="marcador-goles"></span>
+                </div>
             </div>
         </div>
     </template>
 
-    <!-- Arquitectura de scripts en la raíz -->
     <script src="assets/js/paises.js"></script>
     <script src="assets/js/datos.js"></script>
     <script src="assets/js/app.js"></script>
