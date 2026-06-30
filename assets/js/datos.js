@@ -11,8 +11,8 @@ const mundialData = {
     {"id": "P82", "equipoA": "BEL", "equipoB": "SEN"}
   ],
   "ronda-8-izq": [
-    {"id": "P89", "equipoA": "W74", "equipoB": "W77"},
-    {"id": "P90", "equipoA": "W73", "equipoB": "W75"},
+    {"id": "P89", "equipoA": "PAR", "equipoB": "W77"},
+    {"id": "P90", "equipoA": "CAN", "equipoB": "MAR"},
     {"id": "P93", "equipoA": "W83", "equipoB": "W84"},
     {"id": "P94", "equipoA": "W81", "equipoB": "W82"}
   ],
@@ -42,7 +42,7 @@ const mundialData = {
     {"id": "P100", "equipoA": "W95", "equipoB": "W96"}
   ],
   "ronda-8-der": [
-    {"id": "P91", "equipoA": "W76", "equipoB": "W78"},
+    {"id": "P91", "equipoA": "BRA", "equipoB": "W78"},
     {"id": "P92", "equipoA": "W79", "equipoB": "W80"},
     {"id": "P95", "equipoA": "W86", "equipoB": "W88"},
     {"id": "P96", "equipoA": "W85", "equipoB": "W87"}
