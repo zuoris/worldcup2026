@@ -37,8 +37,22 @@ const mundialData = {
       "penaltisB": 3,
       "ganador": "MAR"
     },
-    {"id": "P83", "equipoA": "POR", "equipoB": "CRO"},
-    {"id": "P84", "equipoA": "ESP", "equipoB": "AUT"},
+    {
+      "id": "P83",
+      "equipoA": "POR",
+      "equipoB": "CRO",
+      "golesA": 2,
+      "golesB": 1,
+      "ganador": "POR"
+    },
+    {
+      "id": "P84",
+      "equipoA": "ESP",
+      "equipoB": "AUT",
+      "golesA": 3,
+      "golesB": 0,
+      "ganador": "ESP"
+    },
     {
       "id": "P81",
       "equipoA": "USA",
@@ -57,13 +71,27 @@ const mundialData = {
     }
   ],
   "ronda-8-izq": [
-    {"id": "P89", "equipoA": "PAR", "equipoB": "FRA"},
-    {"id": "P90", "equipoA": "CAN", "equipoB": "MAR"},
-    {"id": "P93", "equipoA": "W83", "equipoB": "W84"},
+    {
+      "id": "P89",
+      "equipoA": "PAR",
+      "equipoB": "FRA",
+      "golesA": 0,
+      "golesB": 1,
+      "ganador": "FRA"
+    },
+    {
+      "id": "P90",
+      "equipoA": "CAN",
+      "equipoB": "MAR",
+      "golesA": 0,
+      "golesB": 3,
+      "ganador": "MAR"
+    },
+    {"id": "P93", "equipoA": "POR", "equipoB": "ESP"},
     {"id": "P94", "equipoA": "USA", "equipoB": "BEL"}
   ],
   "ronda-4-izq": [
-    {"id": "P97", "equipoA": "W89", "equipoB": "W90"},
+    {"id": "P97", "equipoA": "FRA", "equipoB": "MAR"},
     {"id": "P98", "equipoA": "W93", "equipoB": "W94"}
   ],
   "ronda-2-izq": [
@@ -90,8 +118,8 @@ const mundialData = {
   "ronda-8-der": [
     {"id": "P91", "equipoA": "BRA", "equipoB": "NOR"},
     {"id": "P92", "equipoA": "MEX", "equipoB": "ENG"},
-    {"id": "P95", "equipoA": "W86", "equipoB": "W88"},
-    {"id": "P96", "equipoA": "W85", "equipoB": "W87"}
+    {"id": "P95", "equipoA": "ARG", "equipoB": "EGY"},
+    {"id": "P96", "equipoA": "SUI", "equipoB": "COL"}
   ],
   "ronda-16-der": [
     {
@@ -126,10 +154,40 @@ const mundialData = {
       "golesB": 1,
       "ganador": "ENG"
     },
-    {"id": "P86", "equipoA": "ARG", "equipoB": "CPV"},
-    {"id": "P88", "equipoA": "AUS", "equipoB": "EGY"},
-    {"id": "P85", "equipoA": "SUI", "equipoB": "ALG"},
-    {"id": "P87", "equipoA": "COL", "equipoB": "GHA"}
+    {
+      "id": "P86",
+      "equipoA": "ARG",
+      "equipoB": "CPV",
+      "golesA": 3,
+      "golesB": 2,
+      "ganador": "ARG"
+    },
+    {
+      "id": "P88",
+      "equipoA": "AUS",
+      "equipoB": "EGY",
+      "golesA": 1,
+      "golesB": 1,
+      "penaltisA": 2,
+      "penaltisB": 4,
+      "ganador": "EGY"
+    },
+    {
+      "id": "P85",
+      "equipoA": "SUI",
+      "equipoB": "ALG",
+      "golesA": 2,
+      "golesB": 0,
+      "ganador": "SUI"
+    },
+    {
+      "id": "P87",
+      "equipoA": "COL",
+      "equipoB": "GHA",
+      "golesA": 1,
+      "golesB": 0,
+      "ganador": "COL"
+    }
   ]
 };
 
