@@ -120,7 +120,7 @@ const mundialData = {
       "id": "P91",
       "equipoA": "BRA",
       "equipoB": "NOR",
-      "golesA": 0,
+      "golesA": 1,
       "golesB": 2,
       "ganador": "NOR"
     },
