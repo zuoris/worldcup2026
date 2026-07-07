@@ -87,12 +87,26 @@ const mundialData = {
       "golesB": 3,
       "ganador": "MAR"
     },
-    {"id": "P93", "equipoA": "POR", "equipoB": "ESP"},
-    {"id": "P94", "equipoA": "USA", "equipoB": "BEL"}
+    {
+      "id": "P93",
+      "equipoA": "POR",
+      "equipoB": "ESP",
+      "golesA": 0,
+      "golesB": 1,
+      "ganador": "ESP"
+    },
+    {
+      "id": "P94",
+      "equipoA": "USA",
+      "equipoB": "BEL",
+      "golesA": 1,
+      "golesB": 4,
+      "ganador": "BEL"
+    }
   ],
   "ronda-4-izq": [
     {"id": "P97", "equipoA": "FRA", "equipoB": "MAR"},
-    {"id": "P98", "equipoA": "W93", "equipoB": "W94"}
+    {"id": "P98", "equipoA": "ESP", "equipoB": "BEL"}
   ],
   "ronda-2-izq": [
     {"id": "P101", "equipoA": "W97", "equipoB": "W98"}
