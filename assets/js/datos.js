@@ -113,10 +113,17 @@ const mundialData = {
       "golesB": 0,
       "ganador": "FRA"
     },
-    {"id": "P98", "equipoA": "ESP", "equipoB": "BEL"}
+    {
+      "id": "P98",
+      "equipoA": "ESP",
+      "equipoB": "BEL",
+      "golesA": 2,
+      "golesB": 1,
+      "ganador": "ESP"
+    }
   ],
   "ronda-2-izq": [
-    {"id": "P101", "equipoA": "FRA", "equipoB": "W98"}
+    {"id": "P101", "equipoA": "FRA", "equipoB": "ESP"}
   ],
   "final": {
     "id": "P104",
