@@ -105,11 +105,18 @@ const mundialData = {
     }
   ],
   "ronda-4-izq": [
-    {"id": "P97", "equipoA": "FRA", "equipoB": "MAR"},
+    {
+      "id": "P97",
+      "equipoA": "FRA",
+      "equipoB": "MAR",
+      "golesA": 2,
+      "golesB": 0,
+      "ganador": "FRA"
+    },
     {"id": "P98", "equipoA": "ESP", "equipoB": "BEL"}
   ],
   "ronda-2-izq": [
-    {"id": "P101", "equipoA": "W97", "equipoB": "W98"}
+    {"id": "P101", "equipoA": "FRA", "equipoB": "W98"}
   ],
   "final": {
     "id": "P104",
@@ -127,7 +134,7 @@ const mundialData = {
   ],
   "ronda-4-der": [
     {"id": "P99", "equipoA": "NOR", "equipoB": "ENG"},
-    {"id": "P100", "equipoA": "W95", "equipoB": "W96"}
+    {"id": "P100", "equipoA": "ARG", "equipoB": "SUI"}
   ],
   "ronda-8-der": [
     {
@@ -146,8 +153,24 @@ const mundialData = {
       "golesB": 3,
       "ganador": "ENG"
     },
-    {"id": "P95", "equipoA": "ARG", "equipoB": "EGY"},
-    {"id": "P96", "equipoA": "SUI", "equipoB": "COL"}
+    {
+      "id": "P95",
+      "equipoA": "ARG",
+      "equipoB": "EGY",
+      "golesA": 3,
+      "golesB": 2,
+      "ganador": "ARG"
+    },
+    {
+      "id": "P96",
+      "equipoA": "SUI",
+      "equipoB": "COL",
+      "golesA": 0,
+      "golesB": 0,
+      "penaltisA": 4,
+      "penaltisB": 3,
+      "ganador": "SUI"
+    }
   ],
   "ronda-16-der": [
     {
