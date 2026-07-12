@@ -137,11 +137,25 @@ const mundialData = {
     "equipoB": "RU102"
   },
   "ronda-2-der": [
-    {"id": "P102", "equipoA": "W99", "equipoB": "W100"}
+    {"id": "P102", "equipoA": "ENG", "equipoB": "ARG"}
   ],
   "ronda-4-der": [
-    {"id": "P99", "equipoA": "NOR", "equipoB": "ENG"},
-    {"id": "P100", "equipoA": "ARG", "equipoB": "SUI"}
+    {
+      "id": "P99",
+      "equipoA": "NOR",
+      "equipoB": "ENG",
+      "golesA": 1,
+      "golesB": 2,
+      "ganador": "ENG"
+    },
+    {
+      "id": "P100",
+      "equipoA": "ARG",
+      "equipoB": "SUI",
+      "golesA": 3,
+      "golesB": 1,
+      "ganador": "ARG"
+    }
   ],
   "ronda-8-der": [
     {
