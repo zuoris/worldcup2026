@@ -135,16 +135,23 @@ const mundialData = {
   "final": {
     "id": "P104",
     "equipoA": "ESP",
-    "equipoB": "W102",
+    "equipoB": "ARG",
     "campeon": "🏆 CAMPEÓN DEL MUNDO"
   },
   "tercerPuesto": {
     "id": "P103",
     "equipoA": "FRA",
-    "equipoB": "RU102"
+    "equipoB": "ENG"
   },
   "ronda-2-der": [
-    {"id": "P102", "equipoA": "ENG", "equipoB": "ARG"}
+    {
+      "id": "P102",
+      "equipoA": "ENG",
+      "equipoB": "ARG",
+      "golesA": 1,
+      "golesB": 2,
+      "ganador": "ARG"
+    }
   ],
   "ronda-4-der": [
     {
