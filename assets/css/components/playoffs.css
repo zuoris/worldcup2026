@@ -1,5 +1,5 @@
 .partido {
-    position: relative; 
+    position: relative;
     background: var(--card-bg);
     border: 1px solid rgba(0, 102, 255, 0.3);
     border-radius: 4px;
@@ -61,7 +61,7 @@
     border-radius: 8px;
     padding: 24px;
     text-align: center;
-    box-shadow: 
+    box-shadow:
         0 0 30px rgba(212, 175, 55, 0.2),
         inset 0 0 15px rgba(0, 255, 102, 0.1); /* Destello verde sutil en la base */
 }
@@ -104,13 +104,13 @@
 }
 
 .tercer-puesto-bloque {
-    margin-top: 30px; 
+    margin-top: 30px;
     text-align: center;
     width: 100%;
 }
 
 .tercer-puesto-bloque {
-    margin-top: 30px; 
+    margin-top: 30px;
     text-align: center;
     width: 100%;
 }
@@ -144,17 +144,17 @@
     transform: translateX(-50%);
     width: 65px;   /* Ancho en pantalla */
     height: 120px; /* Alto en pantalla */
-    
+
     /* Tu nueva imagen sin fondo */
     background-image: url("../../img/cup.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    
+
     /* El aura de neón ahora sí envolverá perfectamente la silueta del trofeo */
-    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.65)) 
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.65))
             drop-shadow(0 0 25px rgba(255, 145, 0, 0.35));
-            
+
     animation: levitarCopaFinal 4.5s ease-in-out infinite;
     z-index: 10;
 }
@@ -163,17 +163,17 @@
 @keyframes levitarCopaFinal {
     0% {
         top: 15px;
-        filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.65)) 
+        filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.65))
                 drop-shadow(0 0 25px rgba(255, 145, 0, 0.35));
     }
     50% {
         top: 5px; /* Sube elegantemente */
-        filter: drop-shadow(0 0 18px rgba(255, 225, 0, 0.85)) 
+        filter: drop-shadow(0 0 18px rgba(255, 225, 0, 0.85))
                 drop-shadow(0 0 35px rgba(255, 165, 0, 0.45));
     }
     100% {
         top: 15px;
-        filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.65)) 
+        filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.65))
                 drop-shadow(0 0 25px rgba(255, 145, 0, 0.35));
     }
 }
@@ -200,7 +200,7 @@
     text-align: center;
 }
 
-/* Los penaltis: más pequeños, atenuados y con un color neón secundario (cyan) 
+/* Los penaltis: más pequeños, atenuados y con un color neón secundario (cyan)
    para indicar que es un resultado "extra" */
 .penaltis-goles {
     font-size: 0.65rem;
@@ -224,4 +224,16 @@
 .pos-ganador .marcador-goles {
     color: var(--neon-green);
     text-shadow: 0 0 8px rgba(0, 255, 102, 0.4);
+}
+
+/* Color dorado de campeonato para el ID de la Gran Final */
+#contenedor-final .partido-id {
+    background: #eab308 !important;
+    color: #0f172a !important;
+}
+
+/* Color pizarra/bronce para el ID del Tercer Puesto */
+#contenedor-tercer-puesto .partido-id {
+    background: #475569 !important;
+    color: #f8fafc !important;
 }

@@ -14,27 +14,30 @@
     <h1 class="titulo-web">FIFA WORLD CUP 2026</h1>
 
     <div class="super-contenedor-mundial">
-        
+
         <div id="columna-grupos-izq" class="columna-grupos-lateral"></div>
 
         <div class="contenedor-cuadro">
-            
+
             <div id="ronda-16-izq" class="columna ronda-16"></div>
-            
+
             <div id="ronda-8-izq" class="columna ronda-8"></div>
-            
+
             <div id="ronda-4-izq" class="columna ronda-4"></div>
-            
+
             <div id="ronda-2-izq" class="columna ronda-2"></div>
 
-            <div id="columna-final" class="columna columna-final"></div>
+            <div id="columna-final" class="columna columna-final">
+                <div id="contenedor-final"></div>
+                <div id="contenedor-tercer-puesto" class="zona-consolacion"></div>
+            </div>
 
             <div id="ronda-2-der" class="columna ronda-2"></div>
-            
+
             <div id="ronda-4-der" class="columna ronda-4"></div>
-            
+
             <div id="ronda-8-der" class="columna ronda-8"></div>
-            
+
             <div id="ronda-16-der" class="columna ronda-16"></div>
 
         </div>
@@ -42,7 +45,7 @@
         <div id="columna-grupos-der" class="columna-grupos-lateral"></div>
 
     </div>
-    
+
     <!-- ==========================================
          PLANTILLAS NATIVAS (MOLDES DE MAQUETACIÓN)
          ========================================== -->
@@ -86,19 +89,19 @@
     <template id="template-partido">
         <div class="partido">
             <div class="partido-id"></div>
-            
+
             <!-- Fila Equipo A -->
             <div class="fila-equipo equipo-a">
                 <!-- Aquí JavaScript inyectará la bandera y el nombre -->
-                <div class="equipo-info-box"></div> 
+                <div class="equipo-info-box"></div>
                 <div class="resultado-box">
                     <span class="penaltis-goles"></span>
                     <span class="marcador-goles"></span>
                 </div>
             </div>
-            
+
             <hr>
-            
+
             <!-- Fila Equipo B -->
             <div class="fila-equipo equipo-b">
                 <!-- Aquí JavaScript inyectará la bandera y el nombre -->

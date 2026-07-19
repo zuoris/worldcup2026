@@ -53,7 +53,7 @@ function generarHtmlEquipo(datos) {
 function renderizarRonda(idContenedor, partidos) {
     const contenedor = document.getElementById(idContenedor);
     if (!contenedor) return;
-    
+
     // Capturamos el template de HTML
     const template = document.getElementById('template-partido');
     if (!template) return;
@@ -61,33 +61,33 @@ function renderizarRonda(idContenedor, partidos) {
     partidos.forEach(partido => {
         const datosA = obtenerDatosEquipo(partido.equipoA);
         const datosB = obtenerDatosEquipo(partido.equipoB);
-        
+
         // Clonamos el contenido del template (true significa clonar en profundidad)
         const clon = document.importNode(template.content, true);
-        
+
         // 1. Rellenamos el ID del partido
         clon.querySelector('.partido-id').textContent = partido.id;
-        
+
         // 2. Rellenamos los datos base del Equipo A
         const filaA = clon.querySelector('.equipo-a');
         filaA.querySelector('.equipo-info-box').innerHTML = generarHtmlEquipo(datosA);
-        
+
         // 3. Rellenamos los datos base del Equipo B
         const filaB = clon.querySelector('.equipo-b');
         filaB.querySelector('.equipo-info-box').innerHTML = generarHtmlEquipo(datosB);
-        
+
         // 4. LÓGICA DE MARCADORES (Si el partido ya tiene resultado)
         if (partido.golesA !== undefined && partido.golesB !== undefined) {
             // Inyectamos los goles normales
             filaA.querySelector('.marcador-goles').textContent = partido.golesA;
             filaB.querySelector('.marcador-goles').textContent = partido.golesB;
-            
+
             // ¿Hubo penaltis? (Suponiendo que guardas en tu objeto: penaltisA y penaltisB)
             if (partido.penaltisA !== undefined && partido.penaltisB !== undefined) {
                 filaA.querySelector('.penaltis-goles').textContent = `(${partido.penaltisA})`;
                 filaB.querySelector('.penaltis-goles').textContent = `(${partido.penaltisB})`;
             }
-            
+
             // Aplicamos clases cosméticas de ganador/perdedor para activar el CSS neón
             if (partido.ganador === partido.equipoA) {
                 filaA.classList.add('pos-ganador');
@@ -97,7 +97,7 @@ function renderizarRonda(idContenedor, partidos) {
                 filaA.classList.add('pos-perdedor');
             }
         }
-        
+
         // Inyectamos el clon completamente preparado en el DOM
         contenedor.appendChild(clon);
     });
@@ -142,7 +142,7 @@ function crearElementoTablaGrupo(grupo) {
 
     // 2. Clonamos la estructura de la tarjeta del grupo
     const clonGrupo = plantillaGrupo.content.cloneNode(true);
-    
+
     // Rellenamos el título del grupo (ej: GRUPO A)
     clonGrupo.querySelector(".titulo-grupo").textContent = grupo.nombre;
     const cuerpoTabla = clonGrupo.querySelector(".cuerpo-tabla-equipos");
@@ -159,7 +159,7 @@ function crearElementoTablaGrupo(grupo) {
 
         // Buscamos la información del país en tu diccionario (paises.js)
         const datosPais = diccionarioPaises[item.codigo] || { nombre: item.codigo, flagCode: "" };
-        
+
         // Rellenamos datos de identidad y bandera
         clonFila.querySelector(".col-pos").textContent = index + 1;
         clonFila.querySelector(".nombre-completo-txt").textContent = datosPais.nombre;
@@ -185,7 +185,7 @@ function crearElementoTablaGrupo(grupo) {
         cuerpoTabla.appendChild(clonFila);
     });
 
-    // Como un fragmento de template no se puede colgar directamente si queremos manipularlo 
+    // Como un fragmento de template no se puede colgar directamente si queremos manipularlo
     // como elemento único, devolvemos el primer hijo real del fragmento clonado
     return clonGrupo.firstElementChild;
 }
@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
         'ronda-16-izq', 'ronda-8-izq', 'ronda-4-izq', 'ronda-2-izq',
         'ronda-2-der', 'ronda-4-der', 'ronda-8-der', 'ronda-16-der'
     ];
-    
+
     columnasACargar.forEach(ronda => {
         renderizarRonda(ronda, mundialData[ronda]);
     });
@@ -205,44 +205,22 @@ document.addEventListener("DOMContentLoaded", () => {
     // Carga de la columna central (Gran Final y Tercer Puesto)
     const centro = document.getElementById('columna-final');
     if (centro) {
-        const final = mundialData.final;
-        const tercero = mundialData.tercerPuesto;
-        
-        const fA = obtenerDatosEquipo(final.equipoA);
-        const fB = obtenerDatosEquipo(final.equipoB);
-        const tA = obtenerDatosEquipo(tercero.equipoA);
-        const tB = obtenerDatosEquipo(tercero.equipoB);
-        
+        // Estructuramos la columna central dejando los contenedores listos para el template
         centro.innerHTML = `
             <div class="gran-final">
                 <h2>GRAN FINAL</h2>
-                <div class="partido final-match">
-                    <div class="partido-id" style="background: #eab308; color: #0f172a;">${final.id}</div>
-                    <div class="fila-equipo">
-                        ${generarHtmlEquipo(fA)}
-                    </div>
-                    <hr>
-                    <div class="fila-equipo">
-                        ${generarHtmlEquipo(fB)}
-                    </div>
-                </div>
-                <div class="campeon">${final.campeon}</div>
+                <div id="contenedor-final"></div>
             </div>
 
             <div class="tercer-puesto-bloque">
                 <h3>Partido por el tercer puesto</h3>
-                <div class="partido tercer-match">
-                    <div class="partido-id" style="background: #475569; color: #f8fafc;">${tercero.id}</div>
-                    <div class="fila-equipo">
-                        ${generarHtmlEquipo(tA)}
-                    </div>
-                    <hr>
-                    <div class="fila-equipo">
-                        ${generarHtmlEquipo(tB)}
-                    </div>
-                </div>
+                <div id="contenedor-tercer-puesto"></div>
             </div>
         `;
+
+        // ¡Y ahora sí! Mandamos los datos de la final y el tercer puesto a la nueva función
+        renderizarRonda("contenedor-final", mundialData.final);
+        renderizarRonda("contenedor-tercer-puesto", mundialData.tercerPuesto);
     }
 
     renderizarTablasGrupos();
